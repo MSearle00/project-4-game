@@ -110,7 +110,7 @@ class Character {
 
 
     describe() {
-        return "You have met " + this._name + " , " +  this._name + " is " + this._description;
+        return "You have met " + this._name + ", " +  this._name + " is " + this._description;
     }
 
     talk() {
