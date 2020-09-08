@@ -223,6 +223,14 @@ function displayRoomInfo(room) {
     document.getElementById("textarea").innerHTML = textContent
 }
 
+function checkInventory(){
+    for (let i = 0; i < this._backpack.length; i++) {
+        if (list[i] === item) {
+            return item
+        }
+    }
+}
+
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter"){
         command = document.getElementById("usertext").value;
@@ -236,6 +244,16 @@ document.addEventListener("keydown", function(event) {
         }
     }
 });
+
+document.addEventListener("keydown", function(event2){
+    if (event2.key === "Enter"){
+        command = document.getElementById("usertext").value;
+        const commands = ["fight", "inventory", "get"]
+        if(commands.includes( command.toLowerCase())){
+            
+        }
+    }
+})
 
 function startGame() {
     currentRoom = Kitchen;
